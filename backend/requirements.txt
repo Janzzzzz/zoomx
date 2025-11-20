@@ -1,0 +1,3 @@
+# Minimal python dependencies (expand when integrating ML models)
+Pillow
+numpy
