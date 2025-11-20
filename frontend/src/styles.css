@@ -1,0 +1,21 @@
+body { font-family: Inter, system-ui, Arial; margin: 20px; background:#f7f8fa; color:#222; }
+.app { max-width: 900px; margin: auto; }
+.card { background: #fff; padding: 16px; border-radius: 8px; margin-top: 16px; box-shadow: 0 6px 18px rgba(0,0,0,0.06); }
+.avatar-preview { display:flex; gap: 16px; align-items:center; margin-top: 12px; }
+.avatar-preview img { width: 160px; height:160px; object-fit:cover; border-radius: 18px; transition: transform .25s ease; }
+.avatar-preview img.listening { animation: nod 1.2s infinite ease-in-out; }
+@keyframes nod {
+  0% { transform: translateY(0) rotate(0deg) }
+  20% { transform: translateY(-4px) rotate(-1.5deg) }
+  50% { transform: translateY(0) rotate(0deg) }
+  80% { transform: translateY(-2px) rotate(1deg) }
+  100% { transform: translateY(0) rotate(0deg) }
+}
+
+/* small mouth movement (via shadow scale) */
+.avatar-preview img.talking { filter: drop-shadow(0 -2px 0 rgba(0,0,0,0.02)); transform-origin: bottom center; animation: mouth 0.28s infinite; }
+@keyframes mouth {
+  0% { transform: scaleY(1) }
+  50% { transform: scaleY(0.98) }
+  100% { transform: scaleY(1) }
+}
